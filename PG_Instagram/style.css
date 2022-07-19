@@ -1,0 +1,162 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family:sans-serif;
+    font-size: 14px;
+    
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(243, 243, 243); /*altera a cor do body para um cinza claro*/
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.instagram-wrapper{
+    display: flex;/*alinha tudo em linha ocupando o espaço que realmente necessita no container*/
+    align-items: center; /*o alinhamento vertical dos intems. ele vai ficar no centro*/
+    justify-content: start/*o alinhamento em linha ficara no centro*/
+    width: 60%; /*tamanho do container */
+    height: 100vh;
+}
+
+.instagram-fone{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%; /* estabelece onde a imagem ficará na sua largura da imagem*/
+    
+}
+
+.instagram-fone img{
+   height: 40rem; /*este comando serve para estabelecer o tamanho da altura da imagem caso necessário*/
+}
+
+.instagram-continue{
+    display: flex;
+    align-items: center;/*na horizontal*/
+    justify-content: space-around; /*está na vertical*/
+    flex-direction: column;
+    width: 40%;
+    min-height: 34rem;/*altera as distancias dos intems de cima(margem)*/
+
+}
+
+
+.group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    width:100%;
+    padding: 1.3rem 0;
+    border: 1px solid lightgrey;
+}
+
+.group:nth-child(1){/*altera o primeiro elemento da coluna da direita*/
+    min-height: 19rem;
+}
+
+.instagram-logo{
+    height: 3rem;
+}
+
+
+
+.perfil-foto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden; /*inicializa a borda redonda da foto de perfil*/
+}
+
+.perfil-foto img {
+    height: 6rem; /*deixa a foto de perfil mais oval*/
+}
+
+.instagram-login{
+    background-color: #0095f6; /*deixa o plano de fundo na cor azul*/
+    color: #ffffff; /*letra branca*/
+    padding: 8px; /*aumenta o tamanho do plano de fundo do login*/
+    border-radius:4px;
+
+}
+
+.instagram-logout{
+    color: #0095f6;
+    margin-top: 1rem;
+}
+
+.not-account{
+    color: rgb(160, 160,160);/*deixa a cor da letra cinza do noem "não é pauloandre.par"*/
+}
+
+.link-blue{
+    color: #0095f6;
+}
+
+.get-the-app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+    width: 100%;
+    padding: 1.3rem 0;/*em cima 1.3 e embaixo 0*/
+}
+
+.download{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly; /*divide o intem com mesmo espaço no centro e nos lados*/
+    align-items: center;
+    padding: 1rem;
+
+}
+.app-download{
+    height: 3rem;
+    width: 10rem;
+    background-size: cover;
+}
+
+.app-download:nth-child(1){
+    background-image: url('img/app-store-botao.png');
+}
+
+.app-download:nth-child(2){
+    background-image: url('img/google\ play.png');
+}
+
+/* media queries: trata a responsividade*/
+
+@media (max-width: 1024PX){ /*tratando a tela para tablet*/
+ 
+    .instagram-wrapper{
+        width: 90%;
+    }
+}
+
+@media (max-width: 605px){/*tratando a tela para celular*/
+    body {
+            background-color: #ffffff;
+        }
+    .instagram-wrapper {
+    width: 90%;
+    }
+    .instagram-fone {
+        display: none;
+    }
+
+    .instagram-continue{
+        width: 100%;
+    }
+    .group{
+        border: 1px solid transparent;
+    }
+}
